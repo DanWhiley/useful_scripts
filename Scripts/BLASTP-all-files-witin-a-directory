@@ -4,4 +4,4 @@ for i in BLASTdb/*.faa; do
 done ;
 
 # Now show off with a message to the user
-echo "BLASTP complete."
+echo "BLASTP complete!."
