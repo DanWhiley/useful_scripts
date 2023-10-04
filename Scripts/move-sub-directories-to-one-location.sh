@@ -1,4 +1,4 @@
-## Occasionally, there are multiple analysis directories that you want to move to a single, central directory. I can do this with regular expression (if a similar format is followed for outputs).
+## Occasionally, there are multiple analysis directories that you might want to move to a single, central directory. I can do this with regular expression (if a similar format is followed for outputs).
 
 # Create the target directory if it doesn't exist already. Change directory name as needed.
 target_dir="private_db_out_results"
