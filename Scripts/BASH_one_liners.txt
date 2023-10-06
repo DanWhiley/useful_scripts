@@ -1,0 +1,35 @@
+## BASH one liners. Some are my own, some have been collected from others on the internet to sovle certain issues I have faced and some have been adapted for my use. Use with caution and some will need to be edited for your own needs.
+
+## Split a multi-FASTA into individual FASTA files
+
+awk '/^>/{s=++d".fa"} {print > s}' multi.fa
+
+## Print everything except the first line of the file
+
+awk 'NR>1' input.txt
+
+## Print a range of rows (such as 10-100):
+
+awk 'NR>=10&&NR<=100' input.txt
+
+## Search for specific file of interest anywhere in the current directory. This is useful for programs that output multiple file types. 
+
+find . -name "*.your_file_of_interest"
+
+## Run FASTQC in parallel 12 jobs at a time
+
+find *.fastq | parallel -j 12 "fastqc {} --outdir ."
+
+## move all files from subdirectories to current directory and run a cleanup of the empty directories
+
+find . -type f -mindepth 2 -exec mv -i -- {} . \;
+
+find . -depth -mindepth 1 -type d -empty -exec rmdir {} \;
+
+## Gzip all non-gziped files in a directory an subdirectories 
+
+find . -type f ! -name '*.gz' -exec gzip "{}"\;
+
+## search for a gene of interest in files and output them into a text file
+
+grep -r "gene_name_of_interest_here" | cat >> [File_name_here].txt
