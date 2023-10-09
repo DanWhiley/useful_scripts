@@ -11,7 +11,7 @@ library(aplot)
 
 ## Load in the first data table which will be the first concentric ring displaying the country of isolate origin. We will edit this DF to ensure it is compatable with the code/libraries we will use. 
 
-read.csv('df_1.csv') -> df_1
+read.csv('df_1_for_circular_phylogeny.csv') -> df_1
 ## add row name to index for mapping
 rownames(df_1) <- df_1$ID
 df_1$ID <- NULL
@@ -20,7 +20,7 @@ View(df_1)
 
 ## repeat this for df_2. This highlights which strains were newly sequenced or publically available
 
-read.csv('df_2.csv') -> df_2
+read.csv('df_2_for_circular_phylogeny.csv') -> df_2
 rownames(df_2) <- df_2$ID
 df_2$ID <- NULL
 View(df_2)
