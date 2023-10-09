@@ -3,9 +3,9 @@ require(ggplot2)
 require(ggrepel)
 library(ggrepel)
 
-## Load gene hits file from GWAS output
+## Load gene hits file from GWAS output. Can be downloaded from this repo.
 
-gene_hits = read.table("gene_hits.txt", stringsAsFactors=FALSE, header=TRUE)
+gene_hits = read.table("gene_hits-file-for-dot-plot.txt", stringsAsFactors=FALSE, header=TRUE)
 
 # Plot the results as a dot plot using colour blind friendly palatte. At the same time, write an appropriate title. 
 
